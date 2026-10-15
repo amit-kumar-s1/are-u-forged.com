@@ -9,3 +9,8 @@ redis==8.1.0   # shared rate limiting (RATE_LIMIT_BACKEND=redis)
 # Real inference (install when connecting your weights; heavy):
 # torch>=2.2
 # torchvision>=0.17
+
+torch>=2.7.0
+torchvision>=0.22.0
+timm>=1.0.0
+huggingface-hub>=0.30.0
