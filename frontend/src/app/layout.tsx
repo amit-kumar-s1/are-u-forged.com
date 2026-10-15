@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Are You Forged.com",
+    default: "Are You Forged.com | Unwrap the Reality with me",
     template: "%s | Are You Forged.com",
   },
   description:
-    "AI-assisted checks for images, videos and text that may be generated or manipulated.",
+    "An AI-Multimodel that is used for detecting deceptive the fake content through different models",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
