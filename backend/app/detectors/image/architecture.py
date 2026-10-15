@@ -4,16 +4,6 @@ import torch.nn as nn
 from torchvision import models
 
 
-class ResNet18DeepTrust(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.backbone = models.resnet18(weights=None)
-        self.backbone.fc = nn.Linear(self.backbone.fc.in_features, 2)
-
-    def forward(self, x):
-        return self.backbone(x)
-
-
 class SEBlock(nn.Module):
     def __init__(self, channels, reduction=16):
         super().__init__()
@@ -91,8 +81,11 @@ class DinoV2DeepTrust(nn.Module):
 
 
 def build_models():
+    resnet = models.resnet18(weights=None)
+    resnet.fc = nn.Linear(resnet.fc.in_features, 2)
+
     return {
-        "resnet18": ResNet18DeepTrust(),
+        "resnet18": resnet,
         "efficientnet_b4": EfficientNetB4DeepTrust(),
         "dinov2": DinoV2DeepTrust(),
     }
