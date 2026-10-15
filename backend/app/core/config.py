@@ -43,6 +43,9 @@ class Settings(BaseSettings):
     scan_timeout_s: float = 30
     # --- model ---
     inconclusive_band: float = 0.10
+    hf_model_repo: str = "not-human-s1/areyouforged.com"
+    image_fake_threshold: float = 0.40
+    device: str = "auto"
     image_model_path: str = ""
     image_model_name: str = "Image model"
     image_fake_class_index: int = 1
